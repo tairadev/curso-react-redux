@@ -1,6 +1,8 @@
 import './App.css';
 import React from 'react';
 
+import Familia from './components/basicos/Familia';
+import FamiliaMembro from './components/basicos/FamiliaMembro';
 import Primeiro from './components/basicos/Primeiro';
 import ComParametro from './components/basicos/ComParametro';
 import Fragmento from './components/basicos/Fragmento';
@@ -13,6 +15,15 @@ const App = () => {
       <h1>Fundamentos React (Arrow)</h1>
 
       <div className='Cards'>
+        <Card titulo='#05 - Componente com Filhos' color='#00C8F8'>
+          <Familia sobrenome='Taira'>
+            <FamiliaMembro nome='Gustavo' />
+            <FamiliaMembro nome='Guilherme' />
+            <FamiliaMembro nome='Carla' />
+            <FamiliaMembro nome='Maurício' />
+          </Familia>
+        </Card>
+
         <Card titulo='#04 - Desafio aleatório' color='#FA6900'>
           <Aleatorio min={1} max={300} />
         </Card>
