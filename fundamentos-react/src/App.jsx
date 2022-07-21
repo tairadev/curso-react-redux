@@ -1,6 +1,10 @@
 import './App.css';
 import React from 'react';
 
+import UsuarioInfo from './components/condicional/UsuarioInfo';
+import ParOuImpar from './components/condicional/ParOuImpar';
+import TabelaProdutos from './components/repeticao/TabelaProdutos';
+import ListaAlunos from './components/repeticao/ListaAlunos';
 import Familia from './components/basicos/Familia';
 import FamiliaMembro from './components/basicos/FamiliaMembro';
 import Primeiro from './components/basicos/Primeiro';
@@ -15,6 +19,20 @@ const App = () => {
       <h1>Fundamentos React (Arrow)</h1>
 
       <div className='Cards'>
+        <Card titulo='#08 - Renderização condicional' color='#3A9AD9'>
+          <ParOuImpar numero={21} />
+          <UsuarioInfo usuario={{ nome: 'Guilherme' }} />
+          <UsuarioInfo usuario={{ email: 'guilhermeht1906@gmail.com' }} />
+        </Card>
+
+        <Card titulo='#07 - Desafio Repetição' color='#3A9AD9'>
+          <TabelaProdutos />
+        </Card>
+
+        <Card titulo='#06 - Repetição' color='#FF4C65'>
+          <ListaAlunos />
+        </Card>
+
         <Card titulo='#05 - Componente com Filhos' color='#00C8F8'>
           <Familia sobrenome='Taira'>
             <FamiliaMembro nome='Gustavo' />
@@ -33,10 +51,10 @@ const App = () => {
         </Card>
 
         <Card titulo='#02 - Com parâmetro' color='#E8B71A'>
-          <ComParametro 
-            titulo='Situação do Aluno' 
-            aluno='Pedro Silva' 
-            nota={9.2} 
+          <ComParametro
+            titulo='Situação do Aluno'
+            aluno='Pedro Silva'
+            nota={9.2}
           />
         </Card>
 
@@ -44,9 +62,8 @@ const App = () => {
           <Primeiro />
         </Card>
       </div>
-      
     </div>
-  )
-}
+  );
+};
 
 export default App;
