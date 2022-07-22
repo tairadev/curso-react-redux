@@ -12,6 +12,11 @@ import ComParametro from './components/basicos/ComParametro';
 import Fragmento from './components/basicos/Fragmento';
 import Aleatorio from './components/basicos/Aleatorio';
 import Card from './components/layout/Card';
+import DiretaPai from './components/comunicacao/DiretaPai';
+import IndiretaPai from './components/comunicacao/IndiretaPai';
+import Input from './components/formulario/Input';
+import Contador from './components/contador/Contador';
+import Mega from './components/mega/Mega';
 
 const App = () => {
   return (
@@ -19,6 +24,26 @@ const App = () => {
       <h1>Fundamentos React (Arrow)</h1>
 
       <div className='Cards'>
+        <Card titulo='#13 - Mega Sena' color='#424242'>
+          <Mega />
+        </Card>
+
+        <Card titulo='#12 - Contador' color='#424242'>
+          <Contador numeroInicial={10} />
+        </Card>
+
+        <Card titulo='#11 - Componente Controlado (Input)' color='#E45F56'>
+          <Input />
+        </Card>
+
+        <Card titulo='#10 - Comunicação indireta' color='#8BAD39'>
+          <IndiretaPai />
+        </Card>
+
+        <Card titulo='#09 - Comunicação direta' color='#59323C'>
+          <DiretaPai />
+        </Card>
+
         <Card titulo='#08 - Renderização condicional' color='#3A9AD9'>
           <ParOuImpar numero={21} />
           <UsuarioInfo usuario={{ nome: 'Guilherme' }} />
